@@ -1,0 +1,39 @@
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { selectRecipe } from '../actions/index';
+import { bindActionCreators } from 'redux';
+
+class RecipeList extends Component {
+    renderList () {
+        return this.props.recipe.map((recipe) => {
+            return(
+            <li
+            key={recipe.title}
+            onClick={() => this.props.selectRecipe(recipe)}
+            className="list-group-item">{recipe.title}
+            </li>
+             );
+        });
+    }
+    
+    render() {
+        return(
+        <ul className="list-group col-sm-4">
+        {this.renderList()}
+        </ul>
+        )
+    }
+}
+
+function mapStateToProps(state){
+    return {
+        recipe: state.recipe
+    };
+}
+
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ selectRecipe: selectRecipe }, dispatch )
+    
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(RecipeList);
