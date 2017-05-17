@@ -1,9 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Modal from 'react-awesome-modal';
-import BookList from '../containers/recipe_list';
-import BookDetail from '../containers/recipe_detail';
 
-class App extends Component {
+class RecipeModal extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -41,11 +39,10 @@ class App extends Component {
                         <a href="javascript:void(0);" onClick={() => this.closeModal()}>Close</a>
                     </div>
                 </Modal>
-                <BookDetail />
-                <BookList />  
+                       
             </section>
         );
     }
 }
 
-export default App;
+export default RecipeModal;

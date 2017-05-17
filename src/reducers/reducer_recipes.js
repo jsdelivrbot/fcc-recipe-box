@@ -1,10 +1,13 @@
 export default function() {
     return [
-        { title: 'Omlet',
-          instruction: 'prepare for three eggs'
+        { title: 'Omlette',
+          instructions: ['egg','milk','oil','salt']
         },
-         { title: 'Tortilla',
-          instruction: 'prepare for three eggs'
+         { title: 'Miso soup',
+          instructions: ['miso','onion','seaweed','salt']
+        },
+        { title: 'Fried rice',
+          instructions: ['rice','onion','carrot','salt']
         }
     ];
 }
