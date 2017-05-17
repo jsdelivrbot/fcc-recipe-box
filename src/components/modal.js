@@ -34,7 +34,8 @@ class RecipeModal extends Component {
                     onClickAway={() => this.closeModal()}
                 >
                     <div>
-                        <h1>Recipe</h1>
+                        <h2>Add a Recipe</h2>
+                        <div>Recipe<input value="Add a Recipe name" /> </div>
                         <p>Ingredients</p>
                         <a href="javascript:void(0);" onClick={() => this.closeModal()}>Close</a>
                     </div>

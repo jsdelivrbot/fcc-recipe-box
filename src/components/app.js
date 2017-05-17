@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Modal from 'react-awesome-modal';
-import BookList from '../containers/recipe_list';
-import BookDetail from '../containers/recipe_detail';
+import RecipeList from '../containers/recipe_list';
+import RecipeDetail from '../containers/recipe_detail';
+import AddRecipe from '../containers/add_recipe';
 
 class App extends Component {
     constructor(props) {
@@ -36,13 +37,16 @@ class App extends Component {
                     onClickAway={() => this.closeModal()}
                 >
                     <div>
-                        <h1>Recipe</h1>
+                        <h2>Add a Recipe</h2>
+                        <div>Recipe<input value="Add a Recipe name" /> </div>
                         <p>Ingredients</p>
+                        <AddRecipe />
                         <a href="javascript:void(0);" onClick={() => this.closeModal()}>Close</a>
                     </div>
                 </Modal>
-                <BookDetail />
-                <BookList />  
+                
+                <RecipeDetail />
+                <RecipeList />  
             </section>
         );
     }
